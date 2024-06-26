@@ -241,7 +241,7 @@ require('lazy').setup({
   { 'numToStr/Comment.nvim', opts = {} },
 
   -- transparent background
-  { 'xiyaowong/transparent.nvim' },
+  { 'xiyaowong/transparent.nvim', lazy = false },
 
   -- vim tmux navigator
   { 'christoomey/vim-tmux-navigator', lazy = false },
