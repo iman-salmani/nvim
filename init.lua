@@ -243,6 +243,9 @@ require('lazy').setup({
   -- transparent background
   { 'xiyaowong/transparent.nvim' },
 
+  -- vim tmux navigator
+  { 'christoomey/vim-tmux-navigator', lazy = false },
+
   -- Here is a more advanced example where we pass configuration
   -- options to `gitsigns.nvim`. This is equivalent to the following Lua:
   --    require('gitsigns').setup({ ... })
