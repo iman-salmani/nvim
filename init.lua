@@ -246,6 +246,12 @@ require('lazy').setup({
   -- vim tmux navigator
   { 'christoomey/vim-tmux-navigator', lazy = false },
 
+  -- file browser
+  {
+    'nvim-telescope/telescope-file-browser.nvim',
+    dependencies = { 'nvim-telescope/telescope.nvim', 'nvim-lua/plenary.nvim' },
+  },
+
   -- Here is a more advanced example where we pass configuration
   -- options to `gitsigns.nvim`. This is equivalent to the following Lua:
   --    require('gitsigns').setup({ ... })
@@ -375,6 +381,7 @@ require('lazy').setup({
       -- Enable Telescope extensions if they are installed
       pcall(require('telescope').load_extension, 'fzf')
       pcall(require('telescope').load_extension, 'ui-select')
+      pcall(require('telescope').load_extension, 'file-browser')
 
       -- See `:help telescope.builtin`
       local builtin = require 'telescope.builtin'
@@ -411,6 +418,11 @@ require('lazy').setup({
       vim.keymap.set('n', '<leader>sn', function()
         builtin.find_files { cwd = vim.fn.stdpath 'config' }
       end, { desc = '[S]earch [N]eovim files' })
+
+      -- Open file_browser with the path of the current buffer
+      vim.keymap.set('n', '<space>f', function()
+        require('telescope').extensions.file_browser.file_browser()
+      end)
     end,
   },
 
