@@ -421,7 +421,7 @@ require('lazy').setup({
       end, { desc = '[S]earch [N]eovim files' })
 
       -- Open file_browser with the path of the current buffer
-      vim.keymap.set('n', '<space>f', function()
+      vim.keymap.set('n', '<space>fb', function()
         require('telescope').extensions.file_browser.file_browser()
       end)
     end,
