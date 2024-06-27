@@ -132,7 +132,7 @@ vim.opt.signcolumn = 'yes'
 vim.opt.updatetime = 250
 
 -- tab options
-vim.opt.tabstop = 2
+vim.opt.tabstop = 4
 vim.opt.shiftwidth = 0
 vim.opt.expandtab = true
 vim.opt.smartindent = true
