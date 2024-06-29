@@ -844,7 +844,7 @@ require('lazy').setup({
       -- mini files
       local minifiles = require 'mini.files'
       minifiles.setup()
-      vim.keymap.set('n', '<leader>e', minifiles.open, { desc = 'Open File [E]xplorer' })
+      vim.keymap.set('n', '<leader>fb', minifiles.open, { desc = 'Open File [E]xplorer' })
 
       -- ... and there is more!
       --  Check out: https://github.com/echasnovski/mini.nvim
